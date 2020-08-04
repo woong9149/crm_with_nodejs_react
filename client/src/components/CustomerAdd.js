@@ -20,7 +20,7 @@ class CustomerAdd extends React.Component {
             .then((response) => {
                 console.log(response.data);
             }) 
-        this.state({
+        this.setState({
             file : null,
             userName: '',
             birthday: '',
