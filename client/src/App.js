@@ -12,6 +12,16 @@ import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/circularProgress';
 import axios from 'axios';
 
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import InputBase from '@material-ui/core/InputBase';
+import { fade, makeStyles } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+
+
 const styles = theme => ({
   root:{
     width: '100%',
@@ -23,7 +33,8 @@ const styles = theme => ({
   },
   progress:{
     margin: theme.spacing.unit * 2
-  }
+  },
+  
 })
 
 class App extends Component {
@@ -69,6 +80,34 @@ class App extends Component {
     const { classes } = this.props;
   return (
     <div>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="open drawer"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography className={classes.title} variant="h6" noWrap>
+            고객관리 시스템
+          </Typography>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="검색하기"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
+        </Toolbar>
+      </AppBar>
         <Paper className={classes.root}>
           <Table className={classes.table}>
             <TableHead>
