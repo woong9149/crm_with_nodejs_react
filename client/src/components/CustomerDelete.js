@@ -37,7 +37,7 @@ class CustomerDelete extends React.Component {
     render(){
         return (
             <div>
-                <Button varint="contained"  color="secondary" onClick={ this.handleClickOpen }>삭제</Button>
+                <Button variant="contained"  color="secondary" onClick={ this.handleClickOpen }>삭제</Button>
                 <Dialog open={this.state.open} onClose={this.handleClose}>
                     <DialogTitle onClose={this.handleClose}>
                         삭제 경고
@@ -48,8 +48,8 @@ class CustomerDelete extends React.Component {
                         </Typography>
                     </DialogContent>
                     <DialogActions>
-                        <Button varint="contained"  color="primary" onClick={ (e) => {this.deleteCustomer(this.props.id)} }>삭제</Button>
-                        <Button varint="outlined"  color="primary" onClick={ (e) => {this.deleteCustomer(this.props.id)} }>삭제</Button>
+                        <Button variant="contained"  color="primary" onClick={ (e) => {this.deleteCustomer(this.props.id)} }>삭제</Button>
+                        <Button variant="outlined" color="primary" onClick={this.handleClose}>닫기</Button>
                     </DialogActions>
                 </Dialog>
             </div>

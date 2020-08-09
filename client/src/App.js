@@ -11,7 +11,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/circularProgress';
 import axios from 'axios';
-
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -38,7 +37,7 @@ const styles = theme => ({
     marginRight : 18
   },
   progress:{
-    margin:theme.spacing.unit * 2
+    margin:theme.spacing(2)
   },
   grow: {
     flexGrow: 1
